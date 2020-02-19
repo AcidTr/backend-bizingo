@@ -35,7 +35,29 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
+            /*
+
+            Salvar somente as possíveis casas onde a peça seria capturada (possível função para cada casa).validar se é capitão e borda
+             Checar e atualizar cada casa na borda da casa que a peça foi movida se ta com isEmpity = false na mesma linha com coluna + e - 1
+             e na linha de cima coluna - 1 e na linha abaixo coluna + 1.
+             Caso alguma esteja com peça, verificar cada uma se a borda está fechada e tal peça foi capturada. (Validar borda do tabuleiro para capitão)
+             Se as bordas superiores estiverem ocupadas por peças do outro jogador, essa casa perde a peça. (Contailizar -1 ponto e isEmpity = true)
+             Caso contrário, o jogador oposto perde a peça.
+            */
           },
           {
             position: 1,
@@ -45,7 +67,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 0,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -55,7 +95,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 0,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -65,7 +123,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 0,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -75,7 +151,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -90,7 +179,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -100,7 +202,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -110,7 +230,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -120,7 +258,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -130,7 +286,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -140,7 +314,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 0,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 1,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -150,7 +342,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -165,7 +370,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -175,7 +393,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -185,7 +421,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -195,7 +449,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -205,7 +477,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -215,7 +505,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -225,7 +533,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -235,7 +561,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 1,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 2,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -245,7 +589,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -260,7 +617,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -270,7 +640,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -280,7 +668,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -290,7 +696,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -300,7 +724,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -310,7 +752,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -320,7 +780,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -330,7 +808,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -340,7 +836,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -350,7 +864,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 2,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 3,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -360,7 +892,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -375,7 +920,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -385,7 +943,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -395,7 +971,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -405,7 +999,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -415,7 +1027,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -425,7 +1055,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -435,7 +1083,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -445,7 +1111,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -455,7 +1139,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -465,7 +1167,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -475,7 +1195,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -485,7 +1223,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 3,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -495,7 +1251,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -510,7 +1279,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -520,7 +1302,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -530,7 +1330,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -540,7 +1358,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -550,7 +1386,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -560,7 +1414,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -570,7 +1442,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -580,7 +1470,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -590,7 +1498,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -600,7 +1526,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -610,7 +1554,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -620,7 +1582,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -630,7 +1610,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 5,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 13,
@@ -640,7 +1638,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 4,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 4,
+                  column: 14,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 14,
@@ -650,7 +1666,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 15,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -665,7 +1694,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -675,7 +1717,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -685,7 +1745,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -695,7 +1773,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -705,7 +1801,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -715,7 +1829,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -725,7 +1857,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -735,7 +1885,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -745,7 +1913,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -755,7 +1941,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -765,7 +1969,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -775,7 +1997,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -785,7 +2025,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 13,
@@ -795,7 +2053,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 14,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 14,
@@ -805,7 +2081,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 15,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 15,
@@ -815,7 +2109,25 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#fff',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 5,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 6,
+                  column: 16,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 16,
@@ -825,7 +2137,20 @@ class App {
             pawnColor: this.colors.pawn1,
             color: '#777',
             player: 0,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 17,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -840,7 +2165,20 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -850,7 +2188,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -860,7 +2216,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -870,7 +2244,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -880,7 +2272,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -890,7 +2300,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -900,7 +2328,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -910,7 +2356,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -920,7 +2384,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -930,7 +2412,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -940,7 +2440,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -950,7 +2468,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -960,7 +2496,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 13,
@@ -970,7 +2524,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 14,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 14,
@@ -980,7 +2552,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 15,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 15,
@@ -990,7 +2580,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 16,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 16,
@@ -1000,7 +2608,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 17,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 17,
@@ -1010,7 +2636,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 6,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 7,
+                  column: 18,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 18,
@@ -1020,7 +2664,20 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 17,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 19,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -1035,7 +2692,20 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -1045,7 +2715,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -1055,7 +2743,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -1065,7 +2771,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -1075,7 +2799,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -1085,7 +2827,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -1095,7 +2855,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -1105,7 +2883,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -1115,7 +2911,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -1125,7 +2939,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -1135,7 +2967,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -1145,7 +2995,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -1155,7 +3023,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 13,
@@ -1165,7 +3051,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 14,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 14,
@@ -1175,7 +3079,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 15,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 15,
@@ -1185,7 +3107,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 16,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 16,
@@ -1195,7 +3135,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 17,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 17,
@@ -1205,7 +3163,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 18,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 18,
@@ -1215,7 +3191,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 17,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 17,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 19,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 19,
@@ -1225,7 +3219,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 7,
+                  column: 18,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 18,
+                  isEmpity: true,
+                },
+                {
+                  row: 8,
+                  column: 20,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 20,
@@ -1235,7 +3247,20 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 19,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 20,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -1248,9 +3273,22 @@ class App {
             isCaptain: false,
             captainColor: this.colors.captain2,
             pawnColor: this.colors.pawn2,
-            color: '#fff',
+            color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -1260,7 +3298,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -1270,7 +3326,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -1280,7 +3354,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -1290,7 +3382,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -1300,7 +3410,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -1310,7 +3438,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -1320,7 +3466,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -1330,7 +3494,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -1340,7 +3522,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -1350,7 +3550,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -1360,7 +3578,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -1370,7 +3606,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 13,
@@ -1380,7 +3634,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 14,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 14,
@@ -1390,7 +3662,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 15,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 15,
@@ -1400,7 +3690,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 16,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 16,
@@ -1410,7 +3718,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 17,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 17,
@@ -1420,7 +3746,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 17,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 18,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 18,
@@ -1430,7 +3774,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 18,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 17,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 19,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 19,
@@ -1440,7 +3802,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 19,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 18,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 20,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 20,
@@ -1450,7 +3830,20 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 8,
+                  column: 20,
+                  isEmpity: true,
+                },
+                {
+                  row: 9,
+                  column: 19,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -1463,9 +3856,22 @@ class App {
             isCaptain: false,
             captainColor: this.colors.captain2,
             pawnColor: this.colors.pawn2,
-            color: '#fff',
+            color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 1,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 1,
@@ -1475,7 +3881,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 0,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 2,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 2,
@@ -1485,7 +3909,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 1,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 3,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 3,
@@ -1495,7 +3937,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 2,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 4,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 4,
@@ -1505,7 +3965,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 3,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 5,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 5,
@@ -1515,7 +3993,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 4,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 6,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 6,
@@ -1525,7 +4021,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 5,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 7,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 7,
@@ -1535,7 +4049,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 6,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 8,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 8,
@@ -1545,7 +4077,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 7,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 9,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 9,
@@ -1555,7 +4105,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 8,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 10,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 10,
@@ -1565,7 +4133,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 9,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 11,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 11,
@@ -1575,7 +4161,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 10,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 12,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 12,
@@ -1585,7 +4189,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 11,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 13,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 13,
@@ -1595,7 +4217,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 12,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 14,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 14,
@@ -1605,7 +4245,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 13,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 15,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 15,
@@ -1615,7 +4273,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 14,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 16,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 16,
@@ -1625,7 +4301,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 17,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 15,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 17,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 17,
@@ -1635,7 +4329,25 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#777',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 18,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 16,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 18,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
           {
             position: 18,
@@ -1645,7 +4357,20 @@ class App {
             pawnColor: this.colors.pawn2,
             color: '#fff',
             player: 1,
-            // possible borders
+            borders: {
+              borderSquares: [
+                {
+                  row: 9,
+                  column: 19,
+                  isEmpity: true,
+                },
+                {
+                  row: 10,
+                  column: 17,
+                  isEmpity: true,
+                },
+              ],
+            },
           },
         ],
       },
@@ -1723,7 +4448,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -1733,7 +4471,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -1743,7 +4494,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -1753,7 +4517,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -1763,7 +4540,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1778,7 +4568,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -1788,7 +4591,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -1798,7 +4614,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -1808,7 +4637,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -1818,7 +4660,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -1828,7 +4683,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -1838,7 +4706,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1853,7 +4734,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -1863,7 +4757,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -1873,7 +4780,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -1883,7 +4803,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -1893,7 +4826,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -1903,7 +4849,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -1913,7 +4872,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -1923,7 +4895,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -1933,7 +4918,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1948,7 +4946,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -1958,7 +4969,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -1968,7 +4992,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -1978,7 +5015,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -1988,7 +5038,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -1998,7 +5061,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2008,7 +5084,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -2018,7 +5107,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -2028,7 +5130,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -2038,7 +5153,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -2048,7 +5176,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -2063,7 +5204,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -2073,7 +5227,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -2083,7 +5250,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -2093,7 +5273,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -2103,7 +5296,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -2113,7 +5319,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2123,7 +5342,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -2133,7 +5365,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -2143,7 +5388,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -2153,7 +5411,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -2163,7 +5434,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -2173,7 +5457,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -2183,7 +5480,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -2198,7 +5508,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -2208,7 +5531,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -2218,7 +5554,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -2228,7 +5577,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -2238,7 +5600,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -2248,7 +5623,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2258,7 +5646,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -2268,7 +5669,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -2278,7 +5692,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -2288,7 +5715,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -2298,7 +5738,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -2308,7 +5761,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -2318,7 +5784,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 13,
@@ -2328,7 +5807,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 14,
@@ -2338,7 +5830,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -2353,7 +5858,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -2363,7 +5881,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -2373,7 +5904,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -2383,7 +5927,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -2393,7 +5950,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -2403,7 +5973,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2413,7 +5996,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -2423,7 +6019,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -2433,7 +6042,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -2443,7 +6065,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -2453,7 +6088,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -2463,7 +6111,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -2473,7 +6134,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 13,
@@ -2483,7 +6157,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 14,
@@ -2493,7 +6180,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 15,
@@ -2503,7 +6203,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#fff',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 16,
@@ -2513,7 +6226,20 @@ class App {
                 pawnColor: req.colors.pawn1,
                 color: '#777',
                 player: 0,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -2528,7 +6254,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -2538,7 +6277,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -2548,7 +6300,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -2558,7 +6323,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -2568,7 +6346,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -2578,7 +6369,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2588,7 +6392,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -2598,7 +6415,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -2608,7 +6438,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -2618,7 +6461,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -2628,7 +6484,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -2638,7 +6507,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -2648,7 +6530,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 13,
@@ -2658,7 +6553,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 14,
@@ -2668,7 +6576,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 15,
@@ -2678,7 +6599,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 16,
@@ -2688,7 +6622,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 17,
@@ -2698,7 +6645,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 18,
@@ -2708,7 +6668,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -2723,7 +6696,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -2733,7 +6719,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -2743,7 +6742,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -2753,7 +6765,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -2763,7 +6788,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -2773,7 +6811,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2783,7 +6834,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -2793,7 +6857,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -2803,7 +6880,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -2813,7 +6903,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -2823,7 +6926,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -2833,7 +6949,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -2843,7 +6972,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 13,
@@ -2853,7 +6995,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 14,
@@ -2863,7 +7018,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 15,
@@ -2873,7 +7041,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 16,
@@ -2883,7 +7064,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 17,
@@ -2893,7 +7087,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 18,
@@ -2903,7 +7110,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 19,
@@ -2913,7 +7133,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 20,
@@ -2923,7 +7156,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -2938,7 +7184,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -2948,7 +7207,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -2958,7 +7230,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -2968,7 +7253,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -2978,7 +7276,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -2988,7 +7299,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -2998,7 +7322,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -3008,7 +7345,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -3018,7 +7368,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -3028,7 +7391,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -3038,7 +7414,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -3048,7 +7437,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -3058,7 +7460,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 13,
@@ -3068,7 +7483,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 14,
@@ -3078,7 +7506,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 15,
@@ -3088,7 +7529,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 16,
@@ -3098,7 +7552,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 17,
@@ -3108,7 +7575,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 18,
@@ -3118,7 +7598,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 19,
@@ -3128,7 +7621,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 20,
@@ -3138,7 +7644,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -3153,7 +7672,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 1,
@@ -3163,7 +7695,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 2,
@@ -3173,7 +7718,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 3,
@@ -3183,7 +7741,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 4,
@@ -3193,7 +7764,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 5,
@@ -3203,7 +7787,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 6,
@@ -3213,7 +7810,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 7,
@@ -3223,7 +7833,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 8,
@@ -3233,7 +7856,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 9,
@@ -3243,7 +7879,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 10,
@@ -3253,7 +7902,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 11,
@@ -3263,7 +7925,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 12,
@@ -3273,7 +7948,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 13,
@@ -3283,7 +7971,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 14,
@@ -3293,7 +7994,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 15,
@@ -3303,7 +8017,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 16,
@@ -3313,7 +8040,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 17,
@@ -3323,7 +8063,20 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#777',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
               {
                 position: 18,
@@ -3333,15 +8086,29 @@ class App {
                 pawnColor: req.colors.pawn2,
                 color: '#fff',
                 player: 1,
-                // possible borders
+                borders: {
+                  borderSquares: [
+                    {
+                      row: 0,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                    {
+                      row: 1,
+                      column: 1,
+                      isEmpity: true,
+                    },
+                  ],
+                },
               },
             ],
           },
         ];
         Object.keys(this.conncetedUsers).forEach(user => {
-          req.io
-            .to(this.conncetedUsers[user])
-            .emit('updateTable', { positions: this.positions });
+          req.io.to(this.conncetedUsers[user]).emit('updateTable', {
+            positions: this.positions,
+            currentTurn: this.currentTurn,
+          });
         });
       }
       next();

@@ -3,7 +3,7 @@ import { Router } from 'express';
 const routes = new Router();
 
 routes.get('/', (req, res) => {
-  res.json(req.messages);
+  res.json({});
 });
 
 routes.post('/sendMessage', (req, res) => {
@@ -64,6 +64,7 @@ routes.post('/validateMove', (req, res) => {
           isEmpity: true,
         };
         req.currentTurn = req.players.number_2;
+        // TODO: por aqui verificação de adjacencias para captura
       } else {
         req.io
           .to(
@@ -72,6 +73,7 @@ routes.post('/validateMove', (req, res) => {
             ]
           )
           .emit('invalidMovement');
+        return res.json({});
       }
     } else if (
       (player &&
@@ -103,6 +105,7 @@ routes.post('/validateMove', (req, res) => {
         isEmpity: true,
       };
       req.currentTurn = req.players.number_1;
+      // TODO: por aqui verificação de adjacencias para captura
     } else {
       req.io
         .to(
@@ -111,6 +114,7 @@ routes.post('/validateMove', (req, res) => {
           ]
         )
         .emit('invalidMovement');
+      return res.json({});
     }
   } else {
     req.io
